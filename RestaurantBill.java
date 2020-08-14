@@ -1,0 +1,27 @@
+package nest4code;
+import java.util.Scanner;
+public class RestaurantBill {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner price1 = new Scanner(System.in);
+		System.out.print("price1:");
+		float Price1 = price1.nextFloat();
+		Scanner price2 = new Scanner(System.in);
+		System.out.print("price2:");
+		float Price2 = price2.nextFloat();
+		Scanner price3 = new Scanner(System.in);
+		System.out.print("price3:");
+		float Price3 = price3.nextFloat();
+		Scanner taxPercent = new Scanner(System.in);
+		System.out.print("tax%:");
+		float taxPercentage = taxPercent.nextInt();
+		float ProductPrice1_total = Price1 + (((taxPercentage) / 100) * Price1);
+		float ProductPrice2_total = Price2 + (((taxPercentage) / 100) * Price2);
+		float ProductPrice3_total = Price3 + (((taxPercentage) / 100) * Price3);
+		float TotalPrice = ProductPrice1_total + ProductPrice2_total + ProductPrice3_total;
+		System.out.println("Final Amount:"+TotalPrice);
+
+	}
+
+}
